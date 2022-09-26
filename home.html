@@ -1,224 +1,226 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
-<head>
-	<title>HomePage</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220925080512">
-	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+	<head>
+		<title>HomePage</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<!-- <style>body{opacity: 0;}</style> -->
+		<link rel="stylesheet" href="css/style.min.css?_v=20220926154408">
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
 
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__container">
-				<button type="button" class="menu__icon icon-menu"><span></span></button>
-				<a href="" class="header__logo"><img src="img/logo.svg" alt="Logo"></a>
-				<div class="header__menu menu">
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item"><a href="account.html" class="menu__link">About us</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Contact us</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Help and support</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Security info</a></li>
-						</ul>
-					</nav>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<a href="" class="header__logo"><img src="img/logo.svg" alt="Logo"></a>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="account.html" class="menu__link">About us</a></li>
+								<li class="menu__item"><a href="" class="menu__link">Contact us</a></li>
+								<li class="menu__item"><a href="" class="menu__link">Help and support</a></li>
+								<li class="menu__item"><a href="" class="menu__link">Security info</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__actions actions-header">
+						<div class="actions-header__code">BSB: 923-100</div>
+						<button type="submit" class="actions-header__button button">Login</button>
+					</div>
 				</div>
-				<div class="header__actions actions-header">
-					<div class="actions-header__code">BSB: 923-100</div>
-					<button type="submit" class="actions-header__button button">Login</button>
-				</div>
-			</div>
-		</header>
-		<main class="page">
-			<section class="page_login login">
-				<div class="login__container">
+			</header>
+			<main class="page">
+				<section class="page_login login">
+					<div class="login__container">
 
-					<div class="login__items">
-						<div class="login__item">
-							<h1 class="login__main-title">Login</h1>
-							<form action="#" class="login__form form">
-								<div class="form__line">
-									<div class="form__inner">
-										<label for="firstname_1" class="form__label">Enter client number<span class="form__symbol">(using your keyboard)</span></label>
-										<input id="firstname_1" placeholder="Client number" autocomplete="off" type="text" name="firstname_1" class="form__input">
-										<a href="#" class="form__info _icon-info"></a>
-									</div>
-									<div class="form__inner">
-										<div class="form__label">Enter access code<span class="form__symbol">(using the buttons below)</span></div>
-										<div class='keypad'>
-											<div class='keys'>
-												<div class='row'>
-													<button>7</button>
-													<button>0</button>
-													<button>9</button>
+						<div class="login__items">
+							<div class="login__item">
+								<h1 class="login__main-title">Login</h1>
+								<form action="#" class="login__form form">
+									<div class="form__line">
+										<!-- <div class="form__inner"> -->
+										<label for="name" class="form__inner form__inner_info _icon-info">
+											<div class="form__label">Enter client number<span class="form__symbol">(using your keyboard)</span></div>
+											<input id="name" placeholder="Client number" autocomplete="off" type="text" name="form[]" class="form__input">
+										</label>
+										<!-- <a href="#" class="form__info _icon-info"></a> -->
+										<!-- </div> -->
+										<div class="form__inner">
+											<div class="form__label">Enter access code<span class="form__symbol">(using the buttons below)</span></div>
+											<div class='keypad'>
+												<div class='keys'>
+													<div class='row'>
+														<button>7</button>
+														<button>0</button>
+														<button>9</button>
+													</div>
+													<div class='row'>
+														<button>3</button>
+														<button>1</button>
+														<button>8</button>
+													</div>
+													<div class='row'>
+														<button>6</button>
+														<button>5</button>
+														<button>2</button>
+													</div>
+													<div class='row row_keypad-enter'>
+														<button id='keypad-clear'>cancel</button>
+														<button>4</button>
+														<button id='keypad-enter' class="keypad-enter">cancel</button>
+													</div>
 												</div>
-												<div class='row'>
-													<button>3</button>
-													<button>1</button>
-													<button>8</button>
-												</div>
-												<div class='row'>
-													<button>6</button>
-													<button>5</button>
-													<button>2</button>
-												</div>
-												<div class='row row_keypad-enter'>
-													<button id='keypad-clear'>cancel</button>
-													<button>4</button>
-													<button id='keypad-enter' class="keypad-enter">cancel</button>
-												</div>
+												<input type='text' id='keypad-display' class='form__input form__input_key' placeholder='Access code' maxlength='4'>
+												<div class='access'><i class='fa fa-check'></i> Access Granted <a class="keypad-tryagain"><i class='fa fa-refresh'></i></a></div>
+												<div class='noaccess'>Access Denied <a class="keypad-tryagain"><i class='fa fa-refresh'></i></a></div>
 											</div>
-											<input type='text' id='keypad-display' class='form__input form__input_key' placeholder='Access code' maxlength='4'>
-											<div class='access'><i class='fa fa-check'></i> Access Granted <a class="keypad-tryagain"><i class='fa fa-refresh'></i></a></div>
-											<div class='noaccess'>Access Denied <a class="keypad-tryagain"><i class='fa fa-refresh'></i></a></div>
 										</div>
 									</div>
-								</div>
-								<button type="submit" class="form__button button">login</button>
-								<a href="#" class="form__link">Forgotten your access code</a>
-							</form>
-						</div>
-						<div class="login__item">
-							<h3 class="login__title">Important</h3>
-							<h4 class="login__subtitle _icon-info">Linkt Tolling Scam - 31st August 2022:</h4>
-							<p class="login__text">
-								<span>Be aware of a recent impersonation scam received via SMS where scammers are sending a text message from an unknown mobile phone number claiming an overdue bill. This relates to a scam.</span>
-								<span>Please keep your eyes open and tell your friends too. You can block and we recommend you do not engage.</span>
-							</p>
-							<h4 class="login__subtitle _icon-info">Latest security alerts</h4>
-							<p class="login__text">
-								<span>For more information on these scams and how to protect yourself, visit ing.com.au/security</span>
-							</p>
+									<button type="submit" class="form__button button">login</button>
+									<a href="#" class="form__link">Forgotten your access code</a>
+								</form>
+							</div>
+							<div class="login__item">
+								<h3 class="login__title">Important</h3>
+								<h4 class="login__subtitle _icon-info">Linkt Tolling Scam - 31st August 2022:</h4>
+								<p class="login__text">
+									<span>Be aware of a recent impersonation scam received via SMS where scammers are sending a text message from an unknown mobile phone number claiming an overdue bill. This relates to a scam.</span>
+									<span>Please keep your eyes open and tell your friends too. You can block and we recommend you do not engage.</span>
+								</p>
+								<h4 class="login__subtitle _icon-info">Latest security alerts</h4>
+								<p class="login__text">
+									<span>For more information on these scams and how to protect yourself, visit ing.com.au/security</span>
+								</p>
+							</div>
 						</div>
 					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__container">
+					<!-- <div class="footer__nav nav-footer"> -->
+					<div class="footer__wrapper nav-footer">
+						<div class="nav-footer__item">
+							<button type="button" class="nav-footer__title">help and support</button>
+							<div class="nav-footer__body nav-footer__body_no">
+								<ul class="menu-footer__list">
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">FAQs</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">Documents and forms</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">Tips, hints and guides</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">Ways to bank</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="nav-footer__item">
+							<button type="button" class="nav-footer__title">rates and fees</button>
+							<div class="nav-footer__body nav-footer__body_no">
+								<ul class="menu-footer__list">
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">Term deposit rates</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">All savings rates</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">All home loan rates</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">Super rates</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="nav-footer__item">
+							<button type="button" class="nav-footer__title">tools and calculators</button>
+							<div class="nav-footer__body nav-footer__body_no">
+								<ul class="menu-footer__list">
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">Regular Savings Calculator</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">Budget Planner</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">Borrowing Power Calculator</a>
+									</li>
+									<li class="menu-footer__item">
+										<a href="" class="menu-footer__link">Retirement Planner</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="nav-footer__item nav-footer__item_soc">
+							<button type="button" class="nav-footer__title">contact us</button>
+							<div class="nav-footer__body">
+								<ul class="menu-footer__list menu-footer__list_soc">
+									<li class="menu-footer__item menu-footer__item_soc ">
+										<a href="" class="menu-footer__soc _icon-twitter"><span class="menu-footer__link menu-footer__link_soc menu-footer__span">Twitter</span></a>
+									</li>
+									<li class="menu-footer__item menu-footer__item_soc ">
+										<a href="" class="menu-footer__soc _icon-facebook"><span class="menu-footer__link menu-footer__link_soc menu-footer__span">Facebook</span></a>
+									</li>
+									<li class="menu-footer__item menu-footer__item_soc ">
+										<a href="" class="menu-footer__soc _icon-youtube"><span class="menu-footer__link menu-footer__link_soc menu-footer__span">Youtube</span></a>
+									</li>
+									<li class="menu-footer__item menu-footer__item_soc ">
+										<a href="" class="menu-footer__soc _icon-blog"><span class="menu-footer__link menu-footer__link_soc menu-footer__span">Blog</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- </div> -->
 				</div>
-			</section>
-		</main>
-		<footer class="footer">
-			<div class="footer__container">
-				<!-- <div class="footer__nav nav-footer"> -->
-				<div class="footer__wrapper nav-footer">
-					<div class="nav-footer__item">
-						<button type="button" class="nav-footer__title">help and support</button>
-						<div class="nav-footer__body nav-footer__body_no">
-							<ul class="menu-footer__list">
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">FAQs</a>
-								</li>
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">Documents and forms</a>
-								</li>
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">Tips, hints and guides</a>
-								</li>
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">Ways to bank</a>
-								</li>
-							</ul>
-						</div>
+			</footer>
+			<div class="footer-bottom">
+				<div class="footer-bottom__container">
+					<div class="footer-bottom__wrapper">
+						<ul data-da=".footer__wrapper,767.98,last" class="footer-bottom__items">
+							<li class="footer-bottom__item">
+								<a href="#" class="footer-bottom__link">about us</a>
+							</li>
+							<li class="footer-bottom__item">
+								<a href="#" class="footer-bottom__link">contact us</a>
+							</li>
+							<li class="footer-bottom__item">
+								<a href="#" class="footer-bottom__link">careers</a>
+							</li>
+							<li class="footer-bottom__item">
+								<a href="#" class="footer-bottom__link">security</a>
+							</li>
+							<li class="footer-bottom__item">
+								<a href="#" class="footer-bottom__link">privacy</a>
+							</li>
+							<li class="footer-bottom__item">
+								<a href="#" class="footer-bottom__link">legal</a>
+							</li>
+							<li class="footer-bottom__item">
+								<a href="#" class="footer-bottom__link footer-bottom__link_no">site map</a>
+							</li>
+						</ul>
+						<div class="footer-bottom__logo"><img src="img/logo.svg" alt="logo"></div>
 					</div>
-					<div class="nav-footer__item">
-						<button type="button" class="nav-footer__title">rates and fees</button>
-						<div class="nav-footer__body nav-footer__body_no">
-							<ul class="menu-footer__list">
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">Term deposit rates</a>
-								</li>
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">All savings rates</a>
-								</li>
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">All home loan rates</a>
-								</li>
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">Super rates</a>
-								</li>
-							</ul>
-						</div>
+					<div class="footer-bottom__copy">
+						<span class="footer-bottom__tablet">ING is a business name of ING Bank (Australia) Limited ABN 24 000 893 292 AFSL 229823, Australian Credit Licence 229823.</span>
+						<span class="footer-bottom__mobile">For information about the Australian Government Deposit Guarantee, click here. ING Living Super (which is part of the ING Superannuation Fund ABN 13 355 603 448) is issued by The Trust Company (Superannuation) Limited ABN 49 006 421 638, AFSL 235153.</span>
 					</div>
-					<div class="nav-footer__item">
-						<button type="button" class="nav-footer__title">tools and calculators</button>
-						<div class="nav-footer__body nav-footer__body_no">
-							<ul class="menu-footer__list">
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">Regular Savings Calculator</a>
-								</li>
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">Budget Planner</a>
-								</li>
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">Borrowing Power Calculator</a>
-								</li>
-								<li class="menu-footer__item">
-									<a href="" class="menu-footer__link">Retirement Planner</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="nav-footer__item nav-footer__item_soc">
-						<button type="button" class="nav-footer__title">contact us</button>
-						<div class="nav-footer__body">
-							<ul class="menu-footer__list menu-footer__list_soc">
-								<li class="menu-footer__item menu-footer__item_soc ">
-									<a href="" class="menu-footer__soc _icon-twitter"><span class="menu-footer__link menu-footer__link_soc menu-footer__span">Twitter</span></a>
-								</li>
-								<li class="menu-footer__item menu-footer__item_soc ">
-									<a href="" class="menu-footer__soc _icon-facebook"><span class="menu-footer__link menu-footer__link_soc menu-footer__span">Facebook</span></a>
-								</li>
-								<li class="menu-footer__item menu-footer__item_soc ">
-									<a href="" class="menu-footer__soc _icon-youtube"><span class="menu-footer__link menu-footer__link_soc menu-footer__span">Youtube</span></a>
-								</li>
-								<li class="menu-footer__item menu-footer__item_soc ">
-									<a href="" class="menu-footer__soc _icon-blog"><span class="menu-footer__link menu-footer__link_soc menu-footer__span">Blog</span></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- </div> -->
-			</div>
-		</footer>
-		<div class="footer-bottom">
-			<div class="footer-bottom__container">
-				<div class="footer-bottom__wrapper">
-					<ul data-da=".footer__wrapper,767.98,last" class="footer-bottom__items">
-						<li class="footer-bottom__item">
-							<a href="#" class="footer-bottom__link">about us</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="#" class="footer-bottom__link">contact us</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="#" class="footer-bottom__link">careers</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="#" class="footer-bottom__link">security</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="#" class="footer-bottom__link">privacy</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="#" class="footer-bottom__link">legal</a>
-						</li>
-						<li class="footer-bottom__item">
-							<a href="#" class="footer-bottom__link footer-bottom__link_no">site map</a>
-						</li>
-					</ul>
-					<div class="footer-bottom__logo"><picture><source srcset="img" type="image/webp"><img src="img" alt="logo"></picture></div>
-				</div>
-				<div class="footer-bottom__copy">
-					<span class="footer-bottom__tablet">ING is a business name of ING Bank (Australia) Limited ABN 24 000 893 292 AFSL 229823, Australian Credit Licence 229823.</span>
-					<span class="footer-bottom__mobile">For information about the Australian Government Deposit Guarantee, click here. ING Living Super (which is part of the ING Superannuation Fund ABN 13 355 603 448) is issued by The Trust Company (Superannuation) Limited ABN 49 006 421 638, AFSL 235153.</span>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
+		<!-- <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
 			<button data-close type="button" class="popup__close">Закрыть</button>
@@ -228,8 +230,8 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20220925080512"></script>
-	<script src="https://code.jquery.com/jquery-3.6.1.js?_v=20220925080512" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-</body>
+		<script src="js/app.min.js?_v=20220926154408"></script>
+		<script src="https://code.jquery.com/jquery-3.6.1.js?_v=20220926154408" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	</body>
 
 </html>
