@@ -190,6 +190,26 @@ body {
   padding: 0 0.9375rem;
 }
 
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0px 36px;
+  background-color: gray;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.button._fw {
+  width: 100%;
+}
+
 .qs-datepicker-container {
   font-size: 1rem;
   font-family: sans-serif;
@@ -1267,6 +1287,12 @@ body {
 }
 
 @media (max-width: 47.99875em) {
+  .button {
+    color: #444;
+    background-color: rgb(242, 237, 237);
+    padding: 0px 15px;
+  }
+
   .header__container {
     padding: 0 0 0 0.9375rem;
     min-height: 2.8125rem;
