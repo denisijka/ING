@@ -40,22 +40,18 @@
   font-size: 1.125rem;
 }
 
-._icon-select-arrow:before {
-  content: "\e905";
-}
-
-._icon-twitter:before {
+._icon-close-arrow:before {
   content: "\e900";
 }
 
-._icon-blog:before {
-  content: "\e901";
-}
-
 ._icon-info:before {
-  content: "\e902";
+  content: "\e901";
   color: #f60;
   font-size: 1.375rem;
+}
+
+._icon-blog:before {
+  content: "\e902";
 }
 
 ._icon-youtube:before {
@@ -64,6 +60,14 @@
 
 ._icon-facebook:before {
   content: "\e904";
+}
+
+._icon-twitter:before {
+  content: "\e905";
+}
+
+._icon-select-arrow:before {
+  content: "\e906";
 }
 
 * {
@@ -1118,7 +1122,7 @@ body {
 }
 
 .row_keypad-enter button {
-  font-weight: 400;
+  font-weight: 600;
   text-transform: capitalize;
   font-size: 0.875rem;
 }
