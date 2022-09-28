@@ -921,7 +921,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1.25rem;
 }
 
 .form__line:not(:last-child) {
@@ -939,8 +938,16 @@ body {
           flex-direction: column;
 }
 
+.form__inner:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .form__inner_info {
   position: relative;
+}
+
+.form__inner_info:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .form__inner_info::before {
@@ -979,7 +986,7 @@ body {
 }
 
 .form__label:not(:last-child) {
-  margin-bottom: 0.625rem;
+  margin-bottom: 1.25rem;
 }
 
 .form__input {
@@ -1072,7 +1079,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1rem;
 }
 
 .keys:not(:last-child) {
@@ -1083,10 +1089,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .row button {
@@ -1101,6 +1110,10 @@ body {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.row button:not(:last-child) {
+  margin-right: 16px;
 }
 
 .row_keypad-enter button {
@@ -1234,10 +1247,6 @@ body {
   .login {
     padding-bottom: 5.625rem;
   }
-
-  .form__inner {
-    gap: 0.625rem;
-  }
 }
 
 @media (max-width: 20em) {
@@ -1269,10 +1278,6 @@ body {
 
   .login {
     padding-bottom: 5.3125rem;
-  }
-
-  .form__inner {
-    gap: 0.625rem;
   }
 }
 
@@ -1507,12 +1512,6 @@ body {
   }
 }
 
-@media (max-width: 47.99875em) and (max-width: 20em) {
-  .row {
-    gap: 0.625rem;
-  }
-}
-
 @media (max-width: 37.5em) {
   .form__info {
     left: 90%;
@@ -1624,18 +1623,6 @@ body {
       padding-bottom: calc(5.3125rem + 0.3125 * (100vw - 20rem) / 52.5);
     }
 }
-
-@supports (gap: clamp( 0.625rem , 0.625rem  +  0vw , 0.625rem )) {
-    .form__inner {
-      gap: clamp( 0.625rem , 0.625rem  +  0vw , 0.625rem );
-    }
-}
-
-@supports not (gap: clamp( 0.625rem , 0.625rem  +  0vw , 0.625rem )) {
-    .form__inner {
-      gap: calc(0.625rem + 0 * (100vw - 20rem) / 52.5);
-    }
-}
 }
 
 @media (min-width: 47.99875em) and (min-width: 20em) and (max-width: 72.5em) {
@@ -1672,26 +1659,6 @@ body {
   .login__item {
     padding-left: 0.625rem;
   }
-}
-
-@media (max-width: 47.99875em) and (min-width: 72.5em) {
-  .row {
-    gap: 1.875rem;
-  }
-}
-
-@media (max-width: 47.99875em) and (min-width: 20em) and (max-width: 72.5em) {
-@supports (gap: clamp( 0.625rem , 0.1488095238rem  +  2.380952381vw , 1.875rem )) {
-    .row {
-      gap: clamp( 0.625rem , 0.1488095238rem  +  2.380952381vw , 1.875rem );
-    }
-}
-
-@supports not (gap: clamp( 0.625rem , 0.1488095238rem  +  2.380952381vw , 1.875rem )) {
-    .row {
-      gap: calc(0.625rem + 1.25 * (100vw - 20rem) / 52.5);
-    }
-}
 }
 
 @media (any-hover: hover) {
